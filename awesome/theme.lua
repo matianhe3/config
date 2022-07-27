@@ -125,21 +125,6 @@ theme.dock_bg = theme.wibar_bg
 theme.dock_focused_bg = theme.lighter_bg
 theme.dock_accent = theme.accent
 
--- Tabs
-theme.mstab_bar_height = dpi(60)
-theme.mstab_bar_padding = dpi(0)
-theme.mstab_border_radius = theme.corner_radius
-theme.tabbar_disable = true
-theme.tabbar_style = "modern"
-theme.tabbar_bg_focus = theme.lighter_bg
-theme.tabbar_bg_normal = theme.darker_bg
-theme.tabbar_fg_focus = theme.xforeground
-theme.tabbar_fg_normal = theme.xcolor0
-theme.tabbar_position = "bottom"
-theme.tabbar_AA_radius = 0
-theme.tabbar_size = 0
-theme.mstab_bar_ontop = true
-
 -- Notifications
 theme.notification_spacing = dpi(12)
 theme.notification_border_radius = theme.corner_radius

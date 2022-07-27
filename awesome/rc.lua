@@ -117,7 +117,6 @@ end)
 -- {{{ Wibar
 
 -- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
@@ -211,7 +210,6 @@ mytextclock:connect_signal("button::press",
             s.mytasklist, -- Middle widget
             { -- Right widgets
                 layout = wibox.layout.fixed.horizontal,
-                -- mykeyboardlayout,
                 wibox.widget.systray(),
                 net_speed_widget(),
                 cpu_widget({
@@ -518,14 +516,19 @@ ruled.client.connect_signal("request::rules", function()
     ruled.client.append_rule {
         id         = "titlebars",
         rule_any   = { type = { "normal", "dialog" } },
-        properties = { titlebars_enabled = true      }
+        properties = { titlebars_enabled = false}
     }
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- ruled.client.append_rule {
-    --     rule       = { class = "Firefox"     },
-    --     properties = { screen = 1, tag = "2" }
-    -- }
+    ruled.client.append_rule {
+        rule       = { class = "firefox"     },
+        properties = { tag = "2" }
+    }
+
+    ruled.client.append_rule {
+        rule       = { class = "Clash for Windows"     },
+        properties = { tag = "9" }
+    }
 end)
 -- }}}
 
@@ -595,8 +598,8 @@ end)
 
 
 
-awful.spawn.with_shell("picom")
-awful.spawn.with_shell("setxkbmap us colemak")
+awful.spawn.once("cfw")
 awful.spawn.with_shell("fcitx5")
-awful.spawn.with_shell("cfw")
+awful.spawn.once("picom")
+awful.spawn.once("setxkbmap us colemak")
 awful.spawn.once("numlockx on")
