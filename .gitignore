@@ -1,0 +1,17 @@
+*/
+/*
+!/.gitignore
+!/awesome/
+/awesome/awesome-wm-widgets/
+!/emacs/
+!/i3/
+!/kitty
+/kitty/*
+!/kitty/kitty.conf
+!/nvim/
+/nvim/plugin/
+!/picom/
+!/polybar/
+!/ranger/
+/ranger/plugins/
+!/zsh/
