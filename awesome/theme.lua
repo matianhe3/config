@@ -69,29 +69,20 @@ theme.titlebar_color_unfocused = theme.xcolor8
 -- Wibar
 theme.wibar_bg = "#0B161A"
 
--- Dashboard
-theme.dashboard_bg = theme.darker_bg
-theme.dashboard_box_fg = "#666C79"
-
 -- Control center
 theme.control_center_widget_radius = dpi(16)
 theme.control_center_button_bg = "#ffffff" .. "10"
 
--- Music
-theme.music_bg = theme.xbackground
-theme.music_bg_accent = theme.darker_bg
-theme.music_accent = theme.lighter_bg
-
 -- Borders
-theme.border_width = dpi(0)
-theme.oof_border_width = dpi(0)
-theme.border_normal = theme.darker_bg
-theme.border_focus = theme.darker_bg
-theme.widget_border_width = dpi(2)
-theme.widget_border_color = theme.darker_bg
+theme.border_width = dpi(5)
+theme.oof_border_width = dpi(5)
+theme.border_normal = nil
+theme.border_focus = nil
+theme.widget_border_width = dpi(10)
+theme.widget_border_color = nil
 
 -- Corner Radius
-theme.corner_radius = dpi(6)
+theme.corner_radius = dpi(10)
 theme.client_radius = theme.corner_radius
 theme.dashboard_radius = theme.corner_radius
 theme.widget_radius = theme.corner_radius
@@ -113,17 +104,12 @@ theme.tooltip_bg = theme.darker_bg
 theme.tooltip_fg = theme.xforeground
 
 local taglist_square_size = dpi(0)
-theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.fg_normal)
-theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
+theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.xcolor8)
+theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.xcolor4)
 
 -- Systray
 theme.bg_systray = theme.wibar_bg
 theme.systray_icon_spacing = dpi(16)
-
--- Dock
-theme.dock_bg = theme.wibar_bg
-theme.dock_focused_bg = theme.lighter_bg
-theme.dock_accent = theme.accent
 
 -- Notifications
 theme.notification_spacing = dpi(12)

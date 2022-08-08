@@ -598,8 +598,9 @@ end)
 
 
 
-awful.spawn.once("cfw")
-awful.spawn.with_shell("fcitx5")
+awful.spawn("cfw")
+awful.spawn.once("fcitx5")
 awful.spawn.once("picom")
 awful.spawn.once("setxkbmap us colemak")
 awful.spawn.once("numlockx on")
+awful.spawn.once("xset -dpms & xset s off")
