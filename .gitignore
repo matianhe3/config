@@ -4,11 +4,14 @@
 !/awesome/
 /awesome/awesome-wm-widgets/
 !/emacs/
+!/emacs/*
 !/i3/
 !/kitty
 /kitty/*
 !/kitty/kitty.conf
 !/nvim/
+!nvim/*
+!nvim/*/*
 /nvim/plugin/
 !/picom/
 !/polybar/
