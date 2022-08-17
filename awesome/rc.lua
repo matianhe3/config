@@ -178,7 +178,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
-local net_speed_widget = require("awesome-wm-widgets.net-speed-widget.net-speed")
+-- local net_speed_widget = require("awesome-wm-widgets.net-speed-widget.net-speed")
 local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 mytextclock = wibox.widget.textclock()
 local cw = calendar_widget({
@@ -211,7 +211,7 @@ mytextclock:connect_signal("button::press",
             { -- Right widgets
                 layout = wibox.layout.fixed.horizontal,
                 wibox.widget.systray(),
-                net_speed_widget(),
+                -- net_speed_widget(),
                 cpu_widget({
                   width = 60,
                   step_width = 2,
