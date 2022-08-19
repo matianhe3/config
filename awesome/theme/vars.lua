@@ -1,5 +1,5 @@
 local awful = require("awful")
-local cfg_path = awful.util.getdir("config")
+local cfgPath = awful.util.getdir("config")
 
 VARS = {
   layouts = {
@@ -22,7 +22,6 @@ VARS = {
 
   icon_theme = "Papirus-Dark",
 
-
   network = {
     ethernet = "enp2s0"
   },
@@ -38,7 +37,7 @@ VARS = {
 
   modkey = "Mod4",
 
-  wallpaper = cfg_path .. "/assets/wall.png",
+  wallpaper = cfgPath .. "/assets/wall.png",
 
   namestyle = "userhost",
 
