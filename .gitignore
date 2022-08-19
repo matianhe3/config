@@ -2,7 +2,11 @@
 /*
 !/.gitignore
 !/awesome/
-/awesome/awesome-wm-widgets/
+!/awesome/*
+!/awesome/*/
+!/awesome/*/*
+!/awesome/*/*/
+!/awesome/*/*/*
 !/emacs/
 !/emacs/*
 !/i3/
@@ -13,7 +17,7 @@
 !nvim/*
 !nvim/*/*
 /nvim/plugin/
-!/picom/
+!picom.conf
 !/polybar/
 !/ranger/
 /ranger/plugins/
