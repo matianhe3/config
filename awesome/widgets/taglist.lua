@@ -23,7 +23,7 @@ local list_update = function(widget, buttons, label, data, objects)
             align = "center",
             valign = "center",
             visible = true,
-            font = user_vars.font.extrabold,
+            font = VARS.font.extrabold,
             forced_width = dpi(25),
             id = "label",
             widget = wibox.widget.textbox
@@ -89,11 +89,11 @@ local list_update = function(widget, buttons, label, data, objects)
           },
           widget = wibox.container.place
         },
-        forced_width = dpi(33),
-        margins = dpi(6),
+        forced_width = dpi(22),
+        margins = dpi(2),
         widget = wibox.container.margin
       }
-      icon.icon_container.icon:set_image(Get_icon(user_vars.icon_theme, client))
+      icon.icon_container.icon:set_image(Get_icon(VARS.icon_theme, client))
       tag_widget.container:setup({
         icon,
         strategy = "exact",

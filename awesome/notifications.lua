@@ -204,7 +204,7 @@ naughty.connect_signal(
                       {
                         {
                           {
-                            font = user_vars.font.specify .. ", 10",
+                            font = VARS.font.specify .. ", 10",
                             text = "✕",
                             align = "center",
                             valign = "center",
@@ -305,7 +305,7 @@ naughty.connect_signal(
         },
         id = "max_size",
         strategy = "max",
-        width = Theme.notification_max_width or dpi(500),
+        width = THEME.notification_max_width or dpi(500),
         widget = wibox.container.constraint
       },
       id = "background",
@@ -404,26 +404,6 @@ naughty.connect_signal(
   end
 )
 
--- Test notification
---[[naughty.notification {
-  app_name = "System Notification",
-  title    = "A notification 3",
-  message  = "This is very informative and overflowing",
-  icon     = "/home/crylia/.config/awesome/src/assets/userpfp/crylia.png",
-  urgency  = "normal",
-  timeout  = 1,
-  actions  = {
-    naughty.action {
-      name = "Accept",
-    },
-    naughty.action {
-      name = "Refuse",
-    },
-    naughty.action {
-      name = "Ignore",
-    },
-  }
-}--]]
 
 naughty.connect_signal(
   "invoked",

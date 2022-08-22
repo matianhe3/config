@@ -35,7 +35,7 @@ awful.screen.connect_for_each_screen(
       s,
       {
         -- s.battery, s.bluetooth, s.audio, s.kblayout,
-        s.gpu_usage, s.gpu_temp,
+        -- s.gpu_usage, s.gpu_temp,
         s.ram_info, s.cpu_usage, s.cpu_temp,
         s.network, s.date, s.clock, s.powerbutton
       }

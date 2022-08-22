@@ -14,16 +14,12 @@ modkey = "Mod4"
 
 
 
--- {{{ Mouse bindings
 awful.mouse.append_global_mousebindings({
     awful.button({ }, 4, awful.tag.viewprev),
     awful.button({ }, 5, awful.tag.viewnext),
 })
--- }}}
 
--- {{{ Key bindings
 
--- General Awesome keys
 awful.keyboard.append_global_keybindings({
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
@@ -51,7 +47,6 @@ awful.keyboard.append_global_keybindings({
               {description = "show the menubar", group = "launcher"}),
 })
 
--- Tags related keybindings
 awful.keyboard.append_global_keybindings({
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
@@ -61,7 +56,6 @@ awful.keyboard.append_global_keybindings({
               {description = "go back", group = "tag"}),
 })
 
--- Focus related keybindings
 awful.keyboard.append_global_keybindings({
     awful.key({ modkey,           }, "j",
         function ()
@@ -98,7 +92,6 @@ awful.keyboard.append_global_keybindings({
               {description = "restore minimized", group = "client"}),
 })
 
--- Layout related keybindings
 awful.keyboard.append_global_keybindings({
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
@@ -228,8 +221,6 @@ client.connect_signal("request::default_keybindings", function()
                 {description = "toggle keep on top", group = "client"}),
         awful.key({ modkey,           }, "n",
             function (c)
-                -- The client currently has the input focus, so it cannot be
-                -- minimized, since minimized clients can't have the focus.
                 c.minimized = true
             end ,
             {description = "minimize", group = "client"}),
@@ -254,12 +245,8 @@ client.connect_signal("request::default_keybindings", function()
     })
 end)
 
--- }}}
 
--- {{{ Rules
--- Rules to apply to new clients.
 ruled.client.connect_signal("request::rules", function()
-    -- All clients will match this rule.
     ruled.client.append_rule {
         id         = "global",
         rule       = { },
@@ -271,7 +258,6 @@ ruled.client.connect_signal("request::rules", function()
         }
     }
 
-    -- Set Firefox to always map on the tag named "2" on screen 1.
     ruled.client.append_rule {
         rule       = { class = "firefox"     },
         properties = { tag = "2" }
@@ -282,10 +268,8 @@ ruled.client.connect_signal("request::rules", function()
         properties = { tag = "9" }
     }
 end)
--- }}}
 
 
--- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
 end)
