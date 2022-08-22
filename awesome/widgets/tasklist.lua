@@ -27,7 +27,7 @@ nil,
 layout = wibox.layout.align.horizontal,
 id = "layout_icon"
 },
-              forced_width = dpi(20),
+              forced_width = dpi(25),
 margins = dpi(1),
 widget = wibox.container.margin,
 id = "margin"
