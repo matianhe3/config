@@ -16,19 +16,19 @@ return function(s, widgets)
     bg = color["Grey900"],
     visible = true,
     screen = s,
-    placement = function(c) awful.placement.top_right(c, { margins = dpi(10) }) end,
+    placement = function(c) awful.placement.top_right(c, { margins = dpi(5) }) end,
     shape = function(cr, width, height)
       gears.shape.rounded_rect(cr, width, height, 5)
     end
   }
 
   top_right:struts {
-    top = 55
+    top = 40
   }
 
   local function prepare_widgets(widgets)
     local layout = {
-      forced_height = 45,
+      forced_height = 40,
       layout = wibox.layout.fixed.horizontal
     }
     for i, widget in pairs(widgets) do
@@ -47,7 +47,7 @@ return function(s, widgets)
           {
           widget,
           left = dpi(3),
-          right = dpi(6),
+          right = dpi(10),
           top = dpi(6),
           bottom = dpi(6),
           widget = wibox.container.margin
