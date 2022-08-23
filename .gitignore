@@ -10,9 +10,8 @@
 !/emacs/
 !/emacs/*
 !/i3/
-!/kitty
-/kitty/*
-!/kitty/kitty.conf
+!/kitty/
+!/kitty/*
 !/nvim/
 !nvim/*
 !nvim/*/*

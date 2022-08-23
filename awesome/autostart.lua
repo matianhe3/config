@@ -5,8 +5,7 @@ local  autostart = {
     "cfw",
     "fcitx5",
     "numlockx on",
-    "setxkbmap us colemak",
-    "xset -dpms & xset s off"
+    "setxkbmap us colemak"
 }
 
 for _, v in ipairs(autostart) do
