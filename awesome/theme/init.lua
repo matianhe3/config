@@ -110,4 +110,6 @@ screen.connect_signal("request::wallpaper", function(s)
     }
   end)
 
+terminal = VARS.terminal
+
 beautiful.init(THEME)

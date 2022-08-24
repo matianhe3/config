@@ -35,6 +35,8 @@ VARS = {
 
   modkey = "Mod4",
 
+  terminal = "kitty",
+
   wallpaper = cfgPath .. "/assets/wall.png",
 
   namestyle = "userhost",
