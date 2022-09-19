@@ -79,7 +79,7 @@
 (use-package solarized-theme
   :init (load-theme 'solarized-dark t))
 (set-face-attribute 'default nil
-                    :font "FiraCode Nerd Font Mono"
+                    :font "MesloLGS NF"
                     :height 160)
 (use-package all-the-icons
   :if (display-graphic-p))
