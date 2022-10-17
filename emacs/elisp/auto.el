@@ -10,7 +10,13 @@
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
 
 (use-package typescript-mode)
+
 (use-package go-mode)
+
+(use-package python-black
+  :demand t
+  :after python
+  :hook (python-mode . python-black-on-save-mode))
 
 (use-package eglot
   :config
