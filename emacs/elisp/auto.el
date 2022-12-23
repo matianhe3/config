@@ -1,45 +1,44 @@
-(use-package which-key
-  :init (which-key-mode)
-  :config
-  (setq which-key-show-early-on-C-h t))
+(use-package go-mode)
 
-
-(use-package web-mode
-  :config
-  (add-to-list 'auto-mode-alist '("\\.[jt]sx\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
+(use-package lua-mode)
 
 (use-package typescript-mode)
-
-(use-package go-mode)
+ 
+(use-package web-mode
+  :mode ("\\.vue\\'" "\\.html\\'")
+  :init
+  (setq web-mode-content-types-alist '(("vue" . "\\.vue\\'"))
+          web-mode-css-indent-offset 2
+          web-mode-code-indent-offset 2
+          web-mode-markup-indent-offset 2
+          web-mode-enable-css-colorization t
+          web-mode-enable-current-column-highlight nil))
 
 (use-package python-black
   :demand t
   :after python
   :hook (python-mode . python-black-on-save-mode))
 
-(use-package eglot
-  :config
-  (add-to-list 'eglot-server-programs '(web-mode . ("typescript-language-server" "--stdio")))
-  :hook
-  (go-mode . eglot-ensure)
-  (python-mode . eglot-ensure)
-  (typescript-mode . eglot-ensure)
-  (web-mode . eglot-ensure))
+(use-package markdown-mode
+  :ensure t
+  :mode ("README\\.md\\'" . gfm-mode)
+  :init (setq markdown-command "multimarkdown"))
 
-
-(use-package company
-  :hook
-  (prog-mode . global-company-mode))
+(use-package posframe)
 
 (use-package yasnippet
   :hook (prog-mode . yas-minor-mode)
   :bind ("C-c y" . 'company-yasnippet)
   :config (yas-reload-all))
 
+
 (use-package yasnippet-snippets
   :after yasnippet)
 
+
+(add-to-list 'load-path "~/.cache/lsp-bridge")
+(require 'lsp-bridge)
+(global-lsp-bridge-mode)
 
 
 (provide 'auto)

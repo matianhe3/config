@@ -1,4 +1,4 @@
-;; 代理配置
+;; Proxy config
 (setq url-proxy-services nil)
 (defun toggle-proxy ()
   "Toggle proxy for the url.el library."
@@ -14,6 +14,11 @@
             ("https" . "http://localhost:8889")
             ("no_proxy" . "0.0.0.0"))))))
 
+(defun open-init-file()
+  "Open init file."
+  (interactive)
+  (dired "~/.config/emacs"))
+(global-set-key (kbd "<f1>") 'open-init-file)
 
 ;; Cache Dirs
 (setq user-emacs-directory "~/.cache/emacs"
@@ -76,19 +81,17 @@
 (setq global-auto-revert-non-file-buffers t)
 
 ;; Theme And Fonts
-(use-package solarized-theme
-  :init (load-theme 'solarized-dark t))
+;; (use-package solarized-theme
+;;  :init (load-theme 'solarized-dark t))
+(add-to-list 'custom-theme-load-path "~/.cache/emacs/everforest")
+(load-theme 'everforest-hard-dark t)
+
 (set-face-attribute 'default nil
                     :font "MesloLGS NF"
                     :height 160)
 (use-package all-the-icons
   :if (display-graphic-p))
 
-(defun open-init-file()
-  "Open init file."
-  (interactive)
-  (dired "~/.config/emacs"))
-(global-set-key (kbd "<f1>") 'open-init-file)
 
 ;; macOS support ls
 (when (string= system-type "darwin")

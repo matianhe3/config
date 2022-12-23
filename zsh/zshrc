@@ -31,9 +31,6 @@ export GOPATH=$HOME/go
 export GOBIN="$GOPATH/bin"
 export PATH=$PATH:$GOBIN
 
-# Doom PATH
-#
-# export PATH=$PATH:$HOME/.config/emacs/bin
 
 # Alias
 #
