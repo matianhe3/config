@@ -11,7 +11,6 @@ THEME = {}
 THEME.awesome_icon = THEME_PATH .. "../assets/icons/ArchLogo.png"
 THEME.awesome_subicon = THEME_PATH .. "../assets/icons/ArchLogo.png"
 
-
 local icondir = awful.util.getdir("config") .. "/assets/icons/titlebar/"
 
 THEME.font = VARS.font.bold
@@ -42,7 +41,7 @@ THEME.menu_fg_focus = color["White"]
 THEME.menu_border_color = color["Grey800"]
 THEME.menu_border_width = dpi(0)
 THEME.menu_shape = function(cr, width, heigth)
-  gears.shape.rounded_rect(cr, width, heigth, 5)
+	gears.shape.rounded_rect(cr, width, heigth, 5)
 end
 
 THEME.taglist_fg_focus = color["Grey900"]
@@ -54,7 +53,7 @@ THEME.tooltip_fg = color["YellowA200"]
 THEME.tooltip_border_width = dpi(4)
 THEME.tooltip_gaps = dpi(15)
 THEME.tooltip_shape = function(cr, width, heigth)
-  gears.shape.rounded_rect(cr, width, heigth, 5)
+	gears.shape.rounded_rect(cr, width, heigth, 5)
 end
 
 THEME.notification_spacing = dpi(20)
@@ -72,7 +71,7 @@ THEME.hotkeys_bg = color["Grey900"]
 THEME.hotkeys_fg = color["White"]
 THEME.hotkeys_border_width = 0
 THEME.hotkeys_shape = function(cr, width, height)
-  gears.shape.rounded_rect(cr, width, height, 10)
+	gears.shape.rounded_rect(cr, width, height, 10)
 end
 THEME.hotkeys_description_font = VARS.font.bold
 
@@ -94,21 +93,21 @@ THEME.layout_cornersw = layout_path .. "cornersw.svg"
 
 beautiful.wallpaper = VARS.wallpaper
 screen.connect_signal("request::wallpaper", function(s)
-    awful.wallpaper {
-        screen = s,
-        widget = {
-            {
-                image  = beautiful.wallpaper,
-                resize = true,
-                widget = wibox.widget.imagebox
-            },
-            valign = "center",
-            halign = "center",
-            tiled  = false,
-            widget = wibox.container.tile
-        }
-    }
-  end)
+	awful.wallpaper({
+		screen = s,
+		widget = {
+			{
+				image = beautiful.wallpaper,
+				resize = true,
+				widget = wibox.widget.imagebox,
+			},
+			valign = "center",
+			halign = "center",
+			tiled = false,
+			widget = wibox.container.tile,
+		},
+	})
+end)
 
 terminal = VARS.terminal
 

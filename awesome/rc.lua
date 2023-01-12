@@ -1,4 +1,3 @@
-
 require("theme.vars")
 require("theme.init")
 require("keybinding")

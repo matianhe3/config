@@ -1,7 +1,3 @@
---------------------------------------------------------------------------------------------------------------
--- This is the statusbar, every widget, module and so on is combined to all the stuff you see on the screen --
---------------------------------------------------------------------------------------------------------------
--- Awesome Libs
 local awful = require("awful")
 local color = require("theme.colors")
 local dpi = require("beautiful").xresources.apply_dpi
