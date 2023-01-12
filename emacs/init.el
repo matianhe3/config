@@ -81,9 +81,7 @@
 (setq global-auto-revert-non-file-buffers t)
 
 ;; Theme And Fonts
-;; (use-package solarized-theme
-;;  :init (load-theme 'solarized-dark t))
-(add-to-list 'custom-theme-load-path "~/.cache/emacs/everforest")
+(add-to-list 'custom-theme-load-path "~/.config/emacs/everforest-theme")
 (load-theme 'everforest-hard-dark t)
 
 (set-face-attribute 'default nil
