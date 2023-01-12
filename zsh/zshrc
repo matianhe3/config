@@ -38,10 +38,6 @@ alias ls="ls --color=auto"
 alias ll="ls -alh --color=auto"
 alias la="ls -a --color=auto"
 alias tailf="tail -f"
-# kitty shortcat
-alias icat="kitty +kitten icat"
-alias diff="kitty +kitten diff"
-alias kh="kitty +kitten ssh"
 
 # History
 #
