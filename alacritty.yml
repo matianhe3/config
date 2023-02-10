@@ -6,12 +6,12 @@ env:
 
 window:
   dimensions:
-    columns: 100
-    lines: 85
+    columns: 120
+    lines: 35
 
-  #position:
-  #  x: 0
-  #  y: 0
+  position:
+    x: 600
+    y: 300
 
   padding:
     x: 18
@@ -88,7 +88,7 @@ mouse:
   #double_click: { threshold: 300 }
   #triple_click: { threshold: 300 }
 
-  hide_when_typing: true
+  hide_when_typing: false
 
 debug:
   #render_timer: false
