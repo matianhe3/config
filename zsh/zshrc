@@ -12,10 +12,6 @@ function unproxy() {
   unset all_proxy;
 }
 
-# LSP Lua
-#
-export PATH=$PATH:"${HOME}/.local/lua-language-server/bin"
-
 # PIP, adb PATH
 #
 if [ "$(uname)" = "Darwin" ]; then

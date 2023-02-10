@@ -32,7 +32,7 @@ vim.wo.wrap = false
 vim.o.whichwrap = 'b,s,<,>,[,],h,l'
 vim.o.hidden = true
 vim.o.mouse = "a"
-vim.opt.clipboard:append('unnamedplus')
+-- vim.opt.clipboard:append('unnamedplus')
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
@@ -51,6 +51,9 @@ vim.o.showtabline = 2
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+
+
+require("plugins")
 
 -- Key Binding
 vim.g.mapleader = " "
@@ -82,4 +85,3 @@ vim.keymap.set("n", "<leader>gi", ts.lsp_implementations)
 vim.keymap.set("n", "<leader>gr", ts.lsp_references)
 vim.keymap.set("n", "<leader>lf", function () vim.lsp.buf.format({async=true}) end)
 
-require("plugins")
