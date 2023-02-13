@@ -58,7 +58,6 @@ source "${HOME}/.cache/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 # Suggest
 #
 if [ ! -r "${HOME}/.cache/zsh-autosuggestions" ]; then
-  echo "null s"
   git clone https://github.com/zsh-users/zsh-autosuggestions \
   ${HOME}/.cache/zsh-autosuggestions
 fi
