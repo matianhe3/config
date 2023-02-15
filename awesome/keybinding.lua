@@ -237,7 +237,7 @@ ruled.client.connect_signal("request::rules", function()
   })
 
   ruled.client.append_rule({
-      rule = { class = "Clash for Windows" },
+      rule = { class = "Clash-verge" },
       properties = { tag = "9" },
   })
 end)
