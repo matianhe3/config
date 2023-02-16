@@ -7,7 +7,7 @@ local function lspconfig()
     require("lsp_signature").on_attach(client, bufnr)
   end
 
-  local servers = { "pyright", "gopls", "sumneko_lua", "tsserver", "eslint", "volar"}
+  local servers = { "pyright", "gopls", "lua_ls", "tsserver", "eslint", "volar"}
   for _, lsp in pairs(servers) do
     require("lspconfig")[lsp].setup({
       on_attach = on_attach,
