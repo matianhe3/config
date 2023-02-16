@@ -1,6 +1,6 @@
 local function masoncfg()
 	require("mason-lspconfig").setup({
-		ensure_installed = { "gopls", "pyright"},
+		ensure_installed = { },
 	})
 end
 
