@@ -2,7 +2,7 @@ local awful = require("awful")
 
 local autostart = {
 	"picom --experimental-backends",
-	"cfw",
+	"clash",
 	"fcitx5",
 	"numlockx on",
 	"setxkbmap us colemak",
