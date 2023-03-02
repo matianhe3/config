@@ -3,13 +3,7 @@
 !/.gitignore
 !pam_environment
 !awesome/
-!awesome/*
-!awesome/*/
-!awesome/*/*
-!awesome/*/*/
-!awesome/*/*/*
 !emacs/
-!emacs/*
 !i3/
 !kitty/
 !nvim/
