@@ -3,6 +3,9 @@
 !/.gitignore
 !pam_environment
 !awesome/
+!awesome/*/
+!awesome/*/*/
+!awesome/*/*/*/
 !emacs/
 !i3/
 !kitty/
@@ -17,4 +20,6 @@
 !rofi/
 !hypr/
 !eww/
+!eww/*/
+!eww/*/*/
 !wallpaper/

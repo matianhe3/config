@@ -63,8 +63,6 @@ local opt = { noremap = true, silent = true }
 
 map("n", "f", "e", opt)
 map("n", "F", "E", opt)
-map("n", "p", "r", opt)
-map("n", "P", "R", opt)
 map("n", "j", "y", opt)
 map("n", "J", "Y", opt)
 map("n", "l", "u", opt)
