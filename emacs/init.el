@@ -85,7 +85,7 @@
 (load-theme 'everforest-hard-dark t)
 
 (set-face-attribute 'default nil
-                    :font "MesloLGS NF"
+                    :font "JetBrainsMono Nerd Font"
                     :height 160)
 (use-package all-the-icons
   :if (display-graphic-p))

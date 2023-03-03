@@ -60,6 +60,26 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 local map = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
+
+map("n", "f", "e", opt)
+map("n", "F", "E", opt)
+map("n", "p", "r", opt)
+map("n", "P", "R", opt)
+map("n", "j", "y", opt)
+map("n", "J", "Y", opt)
+map("n", "l", "u", opt)
+map("n", "L", "U", opt)
+map("n", "u", "i", opt)
+map("n", "U", "I", opt)
+map("n", "n", "j", opt)
+map("n", "N", "J", opt)
+map("n", "e", "k", opt)
+map("n", "E", "K", opt)
+map("n", "i", "l", opt)
+map("n", "I", "L", opt)
+
+
+
 local ts = require('telescope.builtin')
 
 map("n", "<leader>tt", ":Telescope<CR>", opt)
