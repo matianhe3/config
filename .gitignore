@@ -7,9 +7,12 @@
 !awesome/*/*/
 !awesome/*/*/*/
 !emacs/
+!emacs/*/
 !i3/
 !kitty/
 !nvim/
+!nvim/*/
+!nvim/*/*/
 /nvim/plugin/
 !picom.conf
 !polybar/
@@ -23,3 +26,5 @@
 !eww/*/
 !eww/*/*/
 !wallpaper/
+!waybar/
+!waybar/*/

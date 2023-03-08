@@ -75,6 +75,8 @@ map("n", "e", "k", opt)
 map("n", "E", "K", opt)
 map("n", "i", "l", opt)
 map("n", "I", "L", opt)
+map("n", "k", "n", opt)
+map("n", "K", "N", opt)
 
 
 
