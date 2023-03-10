@@ -13,7 +13,6 @@
 !nvim/
 !nvim/*/
 !nvim/*/*/
-/nvim/plugin/
 !picom.conf
 !polybar/
 !ranger/
