@@ -42,6 +42,15 @@ require("lazy").setup({
 	},
 
 	{
+		"folke/noice.nvim",
+		config = require("plugins.noice"),
+		dependencies = {
+			{ "MunifTanjim/nui.nvim" },
+			{ "rcarriga/nvim-notify" },
+		},
+	},
+
+	{
 		"williamboman/mason.nvim",
 		event = { "VimEnter" },
 		config = require("plugins.mason"),
@@ -75,7 +84,7 @@ require("lazy").setup({
 
 	{
 		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
+		event = { "VimEnter" },
 		dependencies = {
 			{ "hrsh7th/cmp-nvim-lsp" },
 			{ "hrsh7th/cmp-buffer" },
@@ -111,7 +120,7 @@ require("lazy").setup({
 		build = ":TSUpdate",
 		dependencies = {
 			{ "mrjones2014/nvim-ts-rainbow" },
-			{ "indp/nvim-ts-autotag" },
+			{ "windwp/nvim-ts-autotag" },
 			{ "JoosepAlviste/nvim-ts-context-commentstring" },
 			{ "nvim-treesitter/nvim-treesitter-textobjects" },
 			{ "nvim-lua/plenary.nvim" },
@@ -136,5 +145,79 @@ require("lazy").setup({
 		"kylechui/nvim-surround",
 		config = require("plugins.surround"),
 		event = { "VeryLazy" },
+	},
+
+	{
+		"kevinhwang91/nvim-ufo",
+		dependencies = {
+			"kevinhwang91/promise-async",
+		},
+		event = { "VeryLazy" },
+		config = require("plugins.ufo"),
+	},
+
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = {
+			{ "nvim-lua/plenary.nvim" },
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+				build = "make",
+			},
+		},
+		config = require("plugins.telescope"),
+	},
+
+	{
+		"folke/todo-comments.nvim",
+		event = { "UIEnter" },
+		dependencies = {
+			{ "nvim-lua/plenary.nvim" },
+		},
+		conifg = require("plugins.todo"),
+	},
+
+	{
+		"AckslD/nvim-neoclip.lua",
+		dependencies = {
+			"kkharji/sqlite.lua",
+		},
+		config = require("plugins.neoclip"),
+	},
+
+	{
+		"phaazon/hop.nvim",
+		config = require("plugins.hop"),
+	},
+
+	{
+		"NvChad/nvim-colorizer.lua",
+		config = require("plugins.colorizer"),
+	},
+
+	{
+		"lewis6991/gitsigns.nvim",
+		event = { "UIEnter" },
+		config = require("plugins.gitsigns"),
+	},
+
+	{
+		"akinsho/bufferline.nvim",
+		event = { "UIEnter" },
+		config = require("plugins.bufferline"),
+	},
+
+	{
+		"nvim-lualine/lualine.nvim",
+		config = require("plugins.lualine"),
+	},
+	{
+		"stevearc/aerial.nvim",
+		event = { "UIEnter" },
+		config = require("plugins.aerial"),
+	},
+	{
+		"nvim-tree/nvim-tree.lua",
+    config =require("plugins.nvimtree")
 	},
 })

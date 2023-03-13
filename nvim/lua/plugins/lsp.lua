@@ -32,9 +32,18 @@ return function()
 	end
 
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
+	capabilities.textDocument.foldingRange = {
+		dynamicRegistration = false,
+		lineFoldingOnly = true,
+	}
 	local servers = { "pyright", "gopls", "lua_ls", "tsserver" }
 	for _, lsp in pairs(servers) do
 		require("lspconfig")[lsp].setup({
+			settings = {
+				gopls = {
+					gofumpt = true,
+				},
+			},
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

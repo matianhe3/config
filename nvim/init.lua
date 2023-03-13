@@ -32,7 +32,7 @@ vim.wo.wrap = false
 vim.o.whichwrap = 'b,s,<,>,[,],h,l'
 vim.o.hidden = true
 vim.o.mouse = "a"
--- vim.opt.clipboard:append('unnamedplus')
+vim.opt.clipboard:append('unnamedplus')
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
