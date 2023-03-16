@@ -1,5 +1,4 @@
 -- Basic
-local vim = vim
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
 vim.o.scrolloff = 8
@@ -50,8 +49,8 @@ vim.o.pumheight = 10
 vim.o.showtabline = 2
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 
 require("lazies")

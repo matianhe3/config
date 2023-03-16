@@ -1,4 +1,3 @@
-local vim = vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -102,6 +101,7 @@ require("lazy").setup({
 			{ "rafamadriz/friendly-snippets" },
 		},
 		lazy = true,
+		config = require("plugins.luasnip"),
 	},
 
 	{
@@ -169,15 +169,6 @@ require("lazy").setup({
 	},
 
 	{
-		"folke/todo-comments.nvim",
-		event = { "UIEnter" },
-		dependencies = {
-			{ "nvim-lua/plenary.nvim" },
-		},
-		conifg = require("plugins.todo"),
-	},
-
-	{
 		"AckslD/nvim-neoclip.lua",
 		dependencies = {
 			"kkharji/sqlite.lua",
@@ -218,6 +209,6 @@ require("lazy").setup({
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
-    config =require("plugins.nvimtree")
+		config = require("plugins.nvimtree"),
 	},
 })
