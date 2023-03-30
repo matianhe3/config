@@ -14,8 +14,8 @@ window:
     y: 300
 
   padding:
-    x: 18
-    y: 16
+    x: 2
+    y: 2
 
   decorations: none
 

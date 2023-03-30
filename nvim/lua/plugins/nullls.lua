@@ -8,7 +8,7 @@ return function()
 			null_ls.builtins.formatting.black,
 			null_ls.builtins.formatting.gofumpt,
 			null_ls.builtins.formatting.joker,
-			null_ls.builtins.formatting.json_tool,
+			null_ls.builtins.formatting.jq,
 			null_ls.builtins.formatting.nginx_beautifier,
 			null_ls.builtins.formatting.nixfmt,
 			null_ls.builtins.formatting.nixpkgs_fmt,
