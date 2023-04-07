@@ -56,19 +56,34 @@ return function()
 		"yamlls",
 	}
 	for _, lsp in pairs(servers) do
-		require("lspconfig")[lsp].setup({
-			settings = {
-				gopls = {
-					gofumpt = true,
-				},
-				lua_ls = {
-					diagnostics = {
-						globals = { "vim" },
+		if lsp == "lua_ls" then
+			require("lspconfig")[lsp].setup({
+				settings = {
+					lua_ls = {
+						diagnostics = {
+							globals = { "vim", "ngx" },
+						},
 					},
 				},
-			},
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
+				filetypes = { "lua" },
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+		elseif lsp == "gopls" then
+			require("lspconfig")[lsp].setup({
+				settings = {
+					gopls = {
+						gofumpt = true,
+					},
+				},
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+		else
+			require("lspconfig")[lsp].setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+		end
 	end
 end
