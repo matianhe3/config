@@ -38,6 +38,7 @@ require("lazy").setup({
 	{
 		"folke/neodev.nvim",
 		lazy = true,
+		config = require("plugins.neodev"),
 	},
 
 	{
@@ -202,13 +203,30 @@ require("lazy").setup({
 		"nvim-lualine/lualine.nvim",
 		config = require("plugins.lualine"),
 	},
+
 	{
 		"stevearc/aerial.nvim",
 		event = { "UIEnter" },
 		config = require("plugins.aerial"),
 	},
+
 	{
 		"nvim-tree/nvim-tree.lua",
 		config = require("plugins.nvimtree"),
+	},
+
+	{
+		"rcarriga/nvim-dap-ui",
+		config = require("plugins.dap_ui"),
+		dependencies = {
+			{
+				"mfussenegger/nvim-dap",
+				config = require("plugins.dap"),
+			},
+			{
+				"mfussenegger/nvim-dap-python",
+				config = require("plugins.dap_python"),
+			},
+		},
 	},
 })
