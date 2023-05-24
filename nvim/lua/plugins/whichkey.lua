@@ -1,11 +1,6 @@
 return function()
-	vim.o.timeout = true
 	vim.o.timeoutlen = 300
-	require("which-key").setup({
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
-	})
+	require("which-key").setup({})
 	local wk = require("which-key")
 	wk.register({
 		["<leader>"] = {
@@ -16,6 +11,13 @@ return function()
 				name = "Code",
 				a = { name = "code_action" },
 				f = { name = "code_format" },
+			},
+			d = {
+				name = "Dap",
+				s = { name = "start debug" },
+				b = { name = "toggle breakpoint" },
+				o = { name = "step over" },
+				i = { name = "step into" },
 			},
 			g = {
 				name = "Goto",
@@ -28,16 +30,16 @@ return function()
 			h = {
 				name = "Hop",
 			},
-			l = {
-				name = "LSP",
-				f = { name = "format" },
-			},
 			r = {
 				name = "Replace",
 				n = { name = "name" },
 			},
 			t = {
 				name = "Telescope",
+				t = { name = "telescope" },
+				b = { name = "buffers" },
+				f = { name = "find files" },
+				g = { name = "live grep" },
 			},
 			w = {
 				name = "Window/Space",
