@@ -26,7 +26,7 @@ return function()
 			"yaml",
 			"yuck",
 		},
-		sync_install = false,
+		sync_install = true,
 		auto_install = true,
 		ignore_install = {},
 		highlight = {

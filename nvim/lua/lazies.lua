@@ -69,6 +69,7 @@ require("lazy").setup({
 
 	{
 		"j-hui/fidget.nvim",
+		tag = "legacy",
 		event = { "LspAttach" },
 		config = require("plugins.fidget"),
 	},
