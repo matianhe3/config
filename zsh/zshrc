@@ -1,4 +1,3 @@
-source /etc/profile
 # Proxy
 #
 function proxy() {
@@ -13,8 +12,8 @@ function unproxy() {
   unset all_proxy;
 }
 
-# PIP, adb PATH
-#
+
+# PATH
 if [ "$(uname)" = "Darwin" ]; then
   A_PATH="${HOME}/Library/Android/sdk/platform-tools"
 elif [[ $(uname -a) =~ "arch" ]]; then
@@ -22,12 +21,15 @@ elif [[ $(uname -a) =~ "arch" ]]; then
 fi
 export PATH=$PATH:$A_PATH
 
-# GO PATH
-#
 export GOPATH=$HOME/go
 export GOBIN="$GOPATH/bin"
 export PATH=$PATH:$GOBIN
 
+export JAVA_HOME=/opt/jdk1.8.0_202
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export SEATUNNEL_HOME=/opt/seatunnel-2.3.2
+export PATH=$PATH:$JAVA_HOME/bin:$SEATUNNEL_HOME/bin
 
 # Alias
 #
@@ -106,3 +108,4 @@ fi
 [[ $- == *i* ]] && source "${HOME}/.fzf/shell/completion.zsh" 2> /dev/null
 
 source "${HOME}/.fzf/shell/key-bindings.zsh"
+export PATH=$(echo $PATH | tr : "\n" | sort -r | uniq | tr "\n" :)

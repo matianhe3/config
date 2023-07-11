@@ -79,6 +79,12 @@ return function()
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
+		elseif lsp == "sqlls" then
+			require("lspconfig")[lsp].setup({
+				filetypes = { "sql", "mysql" },
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
 		else
 			require("lspconfig")[lsp].setup({
 				capabilities = capabilities,
