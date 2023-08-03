@@ -12,10 +12,9 @@ return function()
 			"html",
 			"jsonls",
 			"sqlls",
-      "tailwindcss",
+			"tailwindcss",
 			"tsserver",
-      "volar",
-      "yamlls"
+			"yamlls",
 		},
 	})
 end
