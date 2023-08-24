@@ -1,7 +1,7 @@
 return function()
 	require("aerial").setup({
 		backends = { "treesitter", "lsp", "markdown", "man" },
-		open_automatic = true,
+		open_automatic = false,
 	})
 	vim.api.nvim_set_keymap("n", "<leader>ao", ":AerialOpen<CR>", {})
 	vim.api.nvim_set_keymap("n", "<leader>ac", ":AerialClose<CR>", {})
