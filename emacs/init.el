@@ -103,7 +103,6 @@
 ;; load diy config
 (push "~/.config/emacs/elisp" load-path)
 
-(require 'project)
 (require 'editor)
 (require 'auto)
 (require 'panel)

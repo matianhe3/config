@@ -28,10 +28,10 @@ vim.o.autoread = true
 vim.bo.autoread = true
 vim.o.wrap = false
 vim.wo.wrap = false
-vim.o.whichwrap = 'b,s,<,>,[,],h,l'
+vim.o.whichwrap = "b,s,<,>,[,],h,l"
 vim.o.hidden = true
 vim.o.mouse = "a"
-vim.opt.clipboard:append('unnamedplus')
+vim.opt.clipboard:append("unnamedplus")
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
@@ -44,7 +44,7 @@ vim.o.termguicolors = true
 vim.opt.termguicolors = true
 vim.o.list = true
 vim.o.wildmenu = true
-vim.o.shortmess = vim.o.shortmess .. 'c'
+vim.o.shortmess = vim.o.shortmess .. "c"
 vim.o.pumheight = 10
 vim.o.showtabline = 2
 vim.g.loaded_netrw = 1
@@ -52,6 +52,4 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
 require("lazies")
-
