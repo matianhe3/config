@@ -7,8 +7,8 @@
 !awesome/*/
 !awesome/*/*/
 !awesome/*/*/*/
-!emacs/
-!emacs/*/
+!doom/
+!doom/*/
 !i3/
 !kitty/
 !nvim/
