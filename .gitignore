@@ -14,6 +14,7 @@
 !nvim/
 !nvim/*/
 !nvim/*/*/
+lazy-lock.json
 !picom.conf
 !polybar/
 !ranger/
