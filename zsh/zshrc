@@ -28,7 +28,7 @@ export PATH=$PATH:$GOBIN
 export JAVA_HOME=/opt/jdk1.8.0_202
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export SEATUNNEL_HOME=/opt/seatunnel-2.3.2
+export SEATUNNEL_HOME=/opt/seatunnel-2.3.3
 export PATH=$PATH:$JAVA_HOME/bin:$SEATUNNEL_HOME/bin
 
 # Alias
