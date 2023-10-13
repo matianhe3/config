@@ -3,12 +3,27 @@ return {
     "LazyVim/LazyVim",
   },
 
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        lua = { "stylua" },
+        -- Conform will run multiple formatters sequentially
+        python = { "black" },
+        -- Use a sub-list to run only the first available formatter
+        javascript = { { "prettierd", "prettier" } },
+      },
+    },
+  },
   -- change trouble config
   {
     "folke/trouble.nvim",
     -- opts will be merged with the parent spec
     opts = { use_diagnostic_signs = true },
   },
+
+  -- disable trouble
+  { "folke/trouble.nvim", enabled = true },
 
   -- add symbols-outline
   {
@@ -24,14 +39,22 @@ return {
     dependencies = { "hrsh7th/cmp-emoji" },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
-      local cmp = require("cmp")
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
+      table.insert(opts.sources, { name = "emoji" })
     end,
   },
 
   -- change some telescope options and a keymap to browse plugin files
   {
     "nvim-telescope/telescope.nvim",
+    keys = {
+      -- add a keymap to browse plugin files
+      -- stylua: ignore
+      {
+        "<leader>fp",
+        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+        desc = "Find Plugin File",
+      },
+    },
     -- change some options
     opts = {
       defaults = {
@@ -82,29 +105,11 @@ return {
   },
 
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = { "mason.nvim" },
-    opts = function()
-      local nls = require("null-ls")
-      return {
-        root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
-        sources = {
-          nls.builtins.formatting.stylua,
-          nls.builtins.formatting.shfmt,
-          nls.builtins.formatting.black,
-          nls.builtins.formatting.prettier,
-        },
-      }
-    end,
-  },
-  -- add tsserver and setup with typescript.nvim instead of lspconfig
-  {
     "neovim/nvim-lspconfig",
     dependencies = {
       "jose-elias-alvarez/typescript.nvim",
       init = function()
-        require("lazyvim.util").on_attach(function(_, buffer)
+        require("lazyvim.util").lsp.on_attach(function(_, buffer)
           -- stylua: ignore
           vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
           vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
@@ -209,6 +214,7 @@ return {
         "stylua",
         "shellcheck",
         "shfmt",
+        "flake8",
       },
     },
   },
