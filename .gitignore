@@ -21,7 +21,7 @@ lazy-lock.json
 !ranger/
 /ranger/plugins/
 !zsh/
-!alacritty.yml
+!alacritty.toml
 !rofi/
 !hypr/
 !eww/
