@@ -30,3 +30,5 @@ lazy-lock.json
 !wallpaper/
 !waybar/
 !waybar/*/
+!wezterm/
+!wezterm/*/
