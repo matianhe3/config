@@ -22,7 +22,6 @@
   ],
   "modules-right": [
     "tray",
-    "backlight",
     "pulseaudio",
     "custom/separator",
     "network",
