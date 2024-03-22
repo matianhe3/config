@@ -1,20 +1,19 @@
+-- since this is just an example spec, don't actually load anything here and return an empty spec
+-- stylua: ignore
+-- if true then return {} end
+
+-- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
+--
+-- In your plugin files, you can:
+-- * add extra plugins
+-- * disable/enabled LazyVim plugins
+-- * override the configuration of LazyVim plugins
 return {
+  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
   },
 
-  {
-    "stevearc/conform.nvim",
-    opts = {
-      formatters_by_ft = {
-        lua = { "stylua" },
-        -- Conform will run multiple formatters sequentially
-        python = { "black" },
-        -- Use a sub-list to run only the first available formatter
-        javascript = { { "prettierd", "prettier" } },
-      },
-    },
-  },
   -- change trouble config
   {
     "folke/trouble.nvim",
@@ -23,15 +22,7 @@ return {
   },
 
   -- disable trouble
-  { "folke/trouble.nvim", enabled = true },
-
-  -- add symbols-outline
-  {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-    keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
-    config = true,
-  },
+  { "folke/trouble.nvim", enabled = false },
 
   -- override nvim-cmp and add cmp-emoji
   {
@@ -66,18 +57,6 @@ return {
     },
   },
 
-  -- add telescope-fzf-native
-  {
-    "telescope.nvim",
-    dependencies = {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-      config = function()
-        require("telescope").load_extension("fzf")
-      end,
-    },
-  },
-
   -- add pyright to lspconfig
   {
     "neovim/nvim-lspconfig",
@@ -85,6 +64,8 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
+        -- pyright will be automatically installed with mason and loaded with lspconfig
+        pyright = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -104,6 +85,7 @@ return {
     },
   },
 
+  -- add tsserver and setup with typescript.nvim instead of lspconfig
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -148,7 +130,6 @@ return {
     opts = {
       ensure_installed = {
         "bash",
-        "go",
         "html",
         "javascript",
         "json",

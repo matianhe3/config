@@ -26,7 +26,7 @@ export GOBIN="$GOPATH/bin"
 export PATH=$GOBIN:$PATH
 
 export JAVA_HOME=/opt/jdk-17.0.9
-export SEATUNNEL_HOME=/opt/apache-seatunnel-2.3.3
+export SEATUNNEL_HOME=/opt/apache-seatunnel-2.3.4
 export PATH=$JAVA_HOME/bin:$SEATUNNEL_HOME/bin:$PATH
 
 typeset -U path
